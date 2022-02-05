@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="assets/css/contact.css"/>
+</head>
+
+<body class="bg">
+    <nav class="navbar"></nav>
+    <form action="" class="form">
+        <h3>get in touch</h3> 
+        <div>
+            <label for="input-name">Name</label>
+            <input type="text" id="input-name">
+        </div>
+        <div>
+            <label for="input-email">Email</label>
+            <input type="text" id="input-email">
+        </div>
+        <div>
+            <label for="input-phone">Phone Number</label>
+            <input type="text" id="input-phone">
+        </div>
+        <div>
+            <label for="input-subject">Subject</label>
+            <select name="select" id="input-subject">
+                <option value="" selected hidden></option>
+                <option value="complain">Complain</option>
+                <option value="request">Request</option>
+                <option value="other-information">Other Information</option>
+            </select>
+        </div>
+        <div>
+            <label for="input-message">Your Message</label>
+            <textarea id="input-message"></textarea>
+        </div>        
+        <button type="button" class="btn-s" onclick="showData()">submit</button>
+    </form>
+    
+    <script type="text/javascript" src="assets/js/form.js"></script>
+    <script type="text/javascript" src="assets/js/load.js"></script>
+</body>
+
+</html>

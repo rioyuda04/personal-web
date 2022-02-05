@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="assets/css/myproject.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg">
+    <nav class="navbar"></nav>
+    <!-- Page Add My Project -->
+    <div class="sub-bd">
+        <form class="content" onsubmit="addBlog(event)">
+            <h2>Add My Project</h2>
+            <!-- input project name -->
+            <div class="i-projectname">
+                <label for="projectName">Project Name</label>
+                <input type="text" id="projectName"/>    
+            </div>
+
+            <!-- sinput date -->
+            <div class="date">
+                <!-- left -->
+                <div class="startdate">
+                    <label for="startDate">Start Date</label>
+                    <input type="date" id="startDate"/>
+                </div>
+                <!-- right -->
+                <div class="enddate">
+                    <label for="endDate">End Date</label>
+                    <input type="date" id="endDate"/>
+                </div>
+            </div>
+
+            <!-- input description -->
+            <div class="descript">
+                <label for="descript">Description</label>
+                <textarea id="descript"></textarea>     
+            </div>
+            <!-- checkbox technologies -->
+            <div class="c-box">
+                <label>Technologies</label>
+                <!-- checkbox left -->
+                <div class="left">
+                    <label for="nodejs">
+                        <input type="checkbox" value="" id="android">Andorid</label>
+                    <label for="reactjs">
+                        <input type="checkbox" value="" id="apple">Apple</label>
+                </div>
+                <!-- checkbox right -->
+                <div class="right">
+                    <label for="nextjs">
+                        <input type="checkbox" value="" id="windows">Windows</label>
+                    <label for="typescript">
+                        <input type="checkbox" value="" id="linux">Linux</label>
+                </div>
+            </div>
+            <!-- upload file image -->
+            <div class="u-image">
+                <label for="upload-image">Upload Image</label>
+                <div class="i-file">
+                    <div class="g-icon">
+                        <label for="choose" class="btn-file">choose</label>
+                        <label for="choose">
+                            <img src="assets/images/file.png" alt="icon-file">
+                        </label>       
+                    </div>
+                    <input type="file" id="choose" hidden/>
+                    <input readonly type="text" id="upload-image"/>
+                </div>
+            </div>
+            <div class="btn">
+                <button>submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- End -->
+
+    <!-- Content My Project -->
+    <div class="bd-my-pj">
+        <div class="pj-page">
+            <div class="text-h2">
+                <h2>My Project</h2>
+            </div>
+            <div id="contents" class="pj-content">
+                <!-- Project View -->
+                <div class="pj-view">
+                    <div class="p-img">
+                        <img src="assets/images/laptop.jpg" alt="photo"/>
+                    </div>
+                    <!-- Group Project Name and Duration -->
+                    <div class="group-n-d">
+                        <div class="p-name">
+                            <label for="">
+                                Dumbways Mobile App - 2021
+                            </label>
+                        </div>
+                        <div class="p-duration">
+                            <label for="">
+                                duration : 3 month
+                            </label>
+                        </div>
+                    </div>
+                    <!-- End -->
+                    <!-- Group Project Description, Icon, Button -->
+                    <div class="group-d-i">
+                        <div class="p-descript">
+                            <p>
+                                App that used for dumbways student, it was,
+                                deployed and can downloaded on playstore.
+                                Happy download
+                            <p>
+                        </div>
+                        <div class="p-icon-tech" id="createIcon">
+                            <i id="iconAndroid" class="fa fa-android"></i>
+                            <i id="iconApple" class="fa fa-apple"></i>
+                            <i id="iconWindows" class="fa fa-windows"></i>
+                            <i id="iconLinux" class="fa fa-linux"></i>
+                        </div>
+                    </div>
+                    <div class="p-btn">
+                        <button type="button" name="edit">edit</button>
+                        <button type="button" name="delete">delete</button>
+                    </div>
+                    <!-- End -->
+                </div>
+                <!-- End Project View -->
+
+            </div>
+        </div>   
+    </div>
+
+    <script src="assets/js/project.js"></script>
+    <script src="assets/js/load.js"></script>
+</body>
+
+
+</html>
