@@ -111,6 +111,7 @@ form[class=content]{
     border: none;
     border-radius: 3px;
     box-shadow: 0px 2px 4px #00000040;
+    font-size: 16px;
 }
 .descript textarea:focus{
     outline: none;
