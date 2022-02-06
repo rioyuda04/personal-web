@@ -106,7 +106,7 @@ function durationDate(){
     }else{ dataDay = ` `}
 
     // Protection Post If Start Date Less than End Date
-    if ( DistanceYear || DistanceMonth || DistanceDay < 0 ) {
+    if ( DistanceYear < 0 ) {
         alert('Sorry, Start Date must less than End Date!!\n Please, try again thanks')
         addBlog() 
     }
