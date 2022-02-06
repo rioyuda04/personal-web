@@ -66,6 +66,9 @@ function addBlog(event){
 }
 
 function durationDate(){
+    // Alert Message
+    let msgAlert = `Sorry, Start Date must less than End Date!!\n\n Please, try again thanks`
+
     // init get value startdate and enddate
     let startDate = document.getElementById('startDate').value
     let endDate = document.getElementById('endDate').value
@@ -90,27 +93,41 @@ function durationDate(){
     let DistanceMonth = getEndMonth - getStartMonth
     let DistanceDay = getEndDay - getStartDay
 
-    console.log(DistanceDay)
+    // console.log(DistanceDay)
+    // Protection if start date = End date
+    if ( DistanceDay <= 0 && DistanceMonth <=0 && DistanceYear <=0){
+        alert(msgAlert)
+        addBlog() 
+    }
+    if (DistanceYear < 0){
+        alert(msgAlert)
+        addBlog() 
+    }
+    if (DistanceYear <=0 && DistanceMonth < 0){
+        alert(msgAlert)
+        addBlog() 
+    }
+    //end protection
+    
     // get data duration
     let dataYear = ` `
     let dataMonth = ` `
     let dataDay = ` `
     if ( DistanceYear >= 1 ){
-        dataYear = `duration : ${DistanceYear} Year more`
-    }else{ dataYear = ` ` }
-    if ( DistanceMonth >= 1 ){
-        dataMonth = `duration : ${DistanceMonth} Month more`
-    }else{ dataMonth = ` `}
-    if ( DistanceDay >= 1 ){
-        dataDay = `duration : ${DistanceDay} Day more`
-    }else{ dataDay = ` `}
-
-    // Protection Post If Start Date Less than End Date
-    if ( DistanceYear < 0 ) {
-        alert('Sorry, Start Date must less than End Date!!\n Please, try again thanks')
-        addBlog() 
+        dataYear = `${DistanceYear} Year `
+    }else{
+        dataYear = ` ` 
     }
-    // End
+    if ( DistanceMonth >= 1 ){
+        dataMonth = `${DistanceMonth} Month `
+    }else
+    { 
+        dataMonth = ` `
+        dataDay = ` `
+    }
+    if ( DistanceDay >= 1 ){
+        dataDay = `${DistanceDay} Day `
+    }else{ dataDay = ` `}
     
     let upDataDuration = {
         dataYear,
@@ -119,7 +136,7 @@ function durationDate(){
     } 
     dataDuration.push(upDataDuration)
 
-    // console.table(dataDuration)
+    console.table(dataDuration)
 
 }
 
@@ -231,9 +248,7 @@ function renderBlog() {
                     </div>
                     <div class="p-duration">
                         <label for="">
-                            ${dataDuration[i].dataYear} 
-                            ${dataDuration[i].dataMonth} 
-                            ${dataDuration[i].dataDay}
+                            Duration : ${dataDuration[i].dataYear} ${dataDuration[i].dataMonth} ${dataDuration[i].dataDay}
                         </label>
                     </div>
                 </div>
