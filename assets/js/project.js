@@ -18,7 +18,7 @@ let month = [
 ]
 
 function addBlog(event){
-    event.preventDefault() 
+    event.preventDefault()
     
     let projectname = document.getElementById('projectName').value
     let description = document.getElementById('descript').value
@@ -216,15 +216,18 @@ function renderBlog() {
         blogContent.innerHTML += `
             <div class="pj-view">
                 <div class="p-img">
-                    <div id="showicon"></div>
-                    <img src="${dataBlog[i].image}" alt="photo"/>
+                    <a href="myproject-detail.html">
+                        <img src="${dataBlog[i].image}" alt="photo"/>
+                    </a>
                 </div>
                 <!-- Group Project Name and Duration -->
                 <div class="group-n-d">
                     <div class="p-name">
-                        <label for="">
-                            ${dataBlog[i].projectname}
-                        </label>
+                        <a href="myproject-detail.html">
+                            <label>
+                                ${dataBlog[i].projectname}
+                            </label>
+                        </a>        
                     </div>
                     <div class="p-duration">
                         <label for="">
@@ -297,14 +300,18 @@ function getDistanceTime(time){
 function firstBlogContent(){
     return `<div class="pj-view">
                 <div class="p-img">
-                    <img src="assets/images/laptop.jpg" alt="photo">
+                    <a href="myproject-detail.html">
+                        <img src="assets/images/laptop.jpg" alt="photo"/>
+                    </a>
                 </div>
                 <!-- Group Project Name and Duration -->
                 <div class="group-n-d">
                     <div class="p-name">
-                        <label for="">
-                            Dumbways Mobile App - 2021
-                        </label>
+                        <a href="myproject-detail.html">
+                            <label>
+                                Dumbways Mobile App - 2021
+                            </label>
+                        </a>
                     </div>
                     <div class="p-duration">
                         <label for="">

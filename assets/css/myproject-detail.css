@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* Initialize all */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+.fa{
+    font-size: 35px!important;
+}
+/* body */
+body{
+    background-color: rgb(190, 208, 212);
+}
+/* end */
+/* sub body */
+.sub-bd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    padding: 60px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-self: flex-start;
+}
+/* Profile */
+.profile{
+    display: flex;
+    width:  100%;
+    justify-content: center;
+    align-self: flex-start;
+    gap: 50px;
+}
+/* Photo / Image */
+.photo{
+    display: flex;
+    width: 50%;
+}
+.photo img{
+    display: flex;
+    width: 100%;
+    min-width: 400px;
+    height: 60vh;
+    /* object-fit: cover; */
+}
+.content-d-t{
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    gap: 30px;
+}
+/* End */
+/* Duration */
+.duration{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-self: flex-start;
+    gap: 13px;
+}
+label[id='h-text-d']{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+}
+div[id='clock'],div[id='calendar']{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+/* End */
+/* technologies */
+.tech{
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 13px;
+}
+label[id='h-text-t']{
+    display: flex;
+    width: 100%;
+    font-size: 20px;
+}
+#content-icon{
+    display: flex;
+    width: 100%;
+    align-self: flex-start;
+}
+#left, #right{
+    display: flex;   
+    align-self: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+#android,#apple,#windows,#linux{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap:10px;
+}
+/* end */
+/* Paragraf content */
+.p-text{
+    width: 100%;
+    text-align: justify; 
+}

@@ -276,7 +276,7 @@ form button:hover{
     height: 40vh;
     object-fit: cover;
 }
-.p-img img{
+.p-img a,img{
     display: flex;
     width: 100%;
     border-radius: 8px;
@@ -285,6 +285,9 @@ form button:hover{
     display: flex;
     width: 100%;
     height: auto;
+}
+.p-name a label{
+    cursor: pointer;
 }
 /* Group Project Name and Duration  */
 .group-n-d{

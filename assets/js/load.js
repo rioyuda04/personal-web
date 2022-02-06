@@ -5,7 +5,7 @@ const load = document.querySelector(".navbar")
 // search loaction and get file navbar.html
 //  and then create paramaeter input for initialize format text (string)
 // and then create paramater data for initialize to html  
-fetch("navbar.html")
+fetch("/chapter1/day6-task/navbar.html")
 .then(input=>input.text())
 .then(data=>{
     load.innerHTML=data

@@ -1,9 +1,75 @@
 <!DOCTYPE html>
 <head>
-
+    <link rel="stylesheet" href="assets/css/myproject-detail.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    
+    <nav class="navbar"></nav>
+    <div class="sub-bd">
+        <div class="header">
+            <h2>Dumbways Web App</h2>
+        </div>
+        <div class="profile">
+            <div class="photo">
+                <img src="assets/images/laptop.jpg" alt="image"/>
+            </div>
+            <div class="content-d-t">
+                <div class="duration">
+                    <label id="h-text-d">Duration</label>
+                    <div id="calendar">
+                        <i class="fa fa-calendar"></i>
+                        <label> 6 Feb 2022 - 20 Des 2022 </label>
+                    </div>
+                    <div id="clock">
+                        <i class="fa fa-clock-o"></i>
+                        <label> 2 Month </label>
+                    </div> 
+                </div>
+                <div class="tech">
+                    <label id="h-text-t">Technologies</label>
+                    <div id="content-icon">
+                        <div id="left">
+                            <span id="android">
+                                <i class="fa fa-android"></i>
+                                <label>Android</label>
+                            </span>
+                            <span id="apple">
+                                <i class="fa fa-apple"></i>
+                                <label>Apple</label>
+                            </span>
+                        </div>
+                        <div id="right">
+                            <span id="windows">
+                                <i class="fa fa-windows"></i>
+                                <label>windows</label>
+                            </span>
+                            <span id="linux">
+                                <i class="fa fa-linux"></i>
+                                <label>linux</label>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="p-text">
+            <p>
+                Web applications are typically described as cross-platform because, ideally, they are accessible from any web browser: the browser is the platform. Web applications generally employ a client–server model, but vary widely in complexity and functionality. It can be hard to reconcile the desire for features with the need for compatibility.
+                Basic web applications perform all or most processing from a stateless server, and pass the result to the client web browser. All user interaction with the application consists of simple exchanges of data requests and server responses. This type of application was the norm in the early phases of World Wide Web application development. Such applications follow a simple transaction model, identical to that of serving static web pages. Today, they are still relatively common, especially where cross-platform compatibility and simplicity are deemed more critical than advanced functionality.
+                Prominent examples of advanced web applications include the Web interface to Gmail, A9.com, Google Maps website, and the Live Search service (now Bing) from Microsoft. Such applications routinely depend on additional features found only in the more recent versions of popular web browsers. These features include Ajax, JavaScript, Dynamic HTML, SVG, and other components of rich web applications. Older versions often lack these.
+                Design Because of the competing interests of compatibility and functionality, numerous design strategies have emerged.
+                Many software systems use a layered architecture where platform-dependent code is restricted to the upper- and lowermost layers.
+            </p>
+            <p>
+                Graceful degradation attempts to provide the same or similar functionality to all users and platforms, while diminishing that functionality to a least common denominator for more limited client browsers. For example, a user attempting to use a limited-feature browser to access Gmail may notice that Gmail switches to basic mode, with reduced functionality but still of use.
+                Some software is maintained in distinct codebases for different (hardware and OS) platforms, with equivalent functionality. This requires more effort to maintain the code, but can be worthwhile where the amount of platform-specific code is high.
+                This strategy relies on having one codebase that may be compiled to multiple platform-specific formats. One technique is conditional compilation. With this technique, code that is common to all platforms is not repeated. Blocks of code that are only relevant to certain platforms are made conditional, so that they are only interpreted or compiled when needed. Another technique is separation of functionality, which disables functionality not supported by browsers or OSs, while still delivering a complete application to the user. (See also: Separation of concerns.) This technique is used in web development where interpreted code (as in scripting languages) can query the platform it is running on to execute different blocks conditionally.
+                Third-party libraries attempt to simplify cross-platform capability by hiding the complexities of client differentiation behind a single, unified API, at the expense of vendor lock-in.
+            </p>
+        </div>
+    </div>
+
+    <script src="assets/js/load.js"></script>
 </body>
 
 
