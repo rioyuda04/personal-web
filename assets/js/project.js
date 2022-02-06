@@ -103,7 +103,7 @@ function durationDate(){
         alert(msgAlert)
         addBlog() 
     }
-    if (DistanceYear <=0 && DistanceMonth < 0){
+    if (DistanceMonth <=0 && DistanceYear < 0){
         alert(msgAlert)
         addBlog() 
     }

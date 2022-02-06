@@ -12,7 +12,7 @@
             <!-- input project name -->
             <div class="i-projectname">
                 <label for="projectName">Project Name</label>
-                <input type="text" id="projectName"/>    
+                <input type="text" id="projectName" required/>    
             </div>
 
             <!-- sinput date -->
@@ -20,19 +20,19 @@
                 <!-- left -->
                 <div class="startdate">
                     <label for="startDate">Start Date</label>
-                    <input type="date" id="startDate"/>
+                    <input type="date" id="startDate" required/>
                 </div>
                 <!-- right -->
                 <div class="enddate">
                     <label for="endDate">End Date</label>
-                    <input type="date" id="endDate"/>
+                    <input type="date" id="endDate" required/>
                 </div>
             </div>
 
             <!-- input description -->
             <div class="descript">
                 <label for="descript">Description</label>
-                <textarea id="descript"></textarea>     
+                <textarea id="descript" required></textarea>     
             </div>
             <!-- checkbox technologies -->
             <div class="c-box">
@@ -62,8 +62,7 @@
                             <img src="assets/images/file.png" alt="icon-file">
                         </label>       
                     </div>
-                    <input type="file" id="choose" hidden/>
-                    <input readonly type="text" id="upload-image"/>
+                    <input type="file" id="choose" required/>
                 </div>
             </div>
             <div class="btn">
