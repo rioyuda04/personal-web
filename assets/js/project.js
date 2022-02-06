@@ -234,7 +234,7 @@ function renderBlog() {
             <div class="pj-view">
                 <div class="p-img">
                     <a href="myproject-detail.html">
-                        <img src="${dataBlog[i].image}" alt="photo"/>
+                        <img id="photo" src="${dataBlog[i].image}" alt="photo"/>
                     </a>
                 </div>
                 <!-- Group Project Name and Duration -->
@@ -316,7 +316,7 @@ function firstBlogContent(){
     return `<div class="pj-view">
                 <div class="p-img">
                     <a href="myproject-detail.html">
-                        <img src="assets/images/laptop.jpg" alt="photo"/>
+                        <img id="photo" src="assets/images/laptop.jpg" alt="photo"/>
                     </a>
                 </div>
                 <!-- Group Project Name and Duration -->
