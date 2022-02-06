@@ -1,5 +1,6 @@
 let dataBlog = []
 let dataIcon = []
+let dataDuration = []
 
 let month = [
   'January',
@@ -17,16 +18,11 @@ let month = [
 ]
 
 function addBlog(event){
-    event.preventDefault()
-
+    event.preventDefault() 
     
     let projectname = document.getElementById('projectName').value
-    let startdate = document.getElementById('startDate').value
-    let enddate = document.getElementById('endDate').value
     let description = document.getElementById('descript').value
 
-    console.log('startdate = ' + startdate)
-    console.log('enddate = ' + enddate)
     // get icon with image
     // let addressNodejs = document.getElementById('iconNodejs').src
     // let SrcBlob = []
@@ -42,6 +38,9 @@ function addBlog(event){
     //     SrcBlob.push(dataBlob)
     // })
     // console.log(SrcBlob)
+
+    // call function duration startdate - enddate
+    durationDate()
     
     // call function get icon with fontawesome
     getIcon()
@@ -60,9 +59,68 @@ function addBlog(event){
         image,
         // postedAt: new Date()
     }
-
+    
     dataBlog.push(blog)
+
     renderBlog()
+}
+
+function durationDate(){
+    // init get value startdate and enddate
+    let startDate = document.getElementById('startDate').value
+    let endDate = document.getElementById('endDate').value
+
+    // init data startdate
+    let createStartDate = new Date(startDate)
+    let getStartYear = createStartDate.getFullYear()
+    let getStartMonth = createStartDate.getUTCMonth() + 1
+    let getStartDay = createStartDate.getUTCDate()
+
+    console.log(`startdate = ` + getStartDay +`/`+ getStartMonth +`/`+ getStartYear )
+
+    let createEndDate = new Date(endDate)
+    let getEndYear = createEndDate.getFullYear()
+    let getEndMonth = createEndDate.getUTCMonth() + 1
+    let getEndDay = createEndDate.getUTCDate() 
+
+    console.log(`enddate = ` + getEndDay +`/`+ getEndMonth +`/`+ getEndYear )
+
+    // init distance
+    let DistanceYear = getEndYear - getStartYear
+    let DistanceMonth = getEndMonth - getStartMonth
+    let DistanceDay = getEndDay - getStartDay
+
+    console.log(DistanceDay)
+    // get data duration
+    let dataYear = ` `
+    let dataMonth = ` `
+    let dataDay = ` `
+    if ( DistanceYear >= 1 ){
+        dataYear = `duration : ${DistanceYear} Year more`
+    }else{ dataYear = ` ` }
+    if ( DistanceMonth >= 1 ){
+        dataMonth = `duration : ${DistanceMonth} Month more`
+    }else{ dataMonth = ` `}
+    if ( DistanceDay >= 1 ){
+        dataDay = `duration : ${DistanceDay} Day more`
+    }else{ dataDay = ` `}
+
+    // Protection Post If Start Date Less than End Date
+    if ( DistanceYear || DistanceMonth || DistanceDay < 0 ) {
+        alert('Sorry, Start Date must less than End Date!!\n Please, try again thanks')
+        addBlog() 
+    }
+    // End
+    
+    let upDataDuration = {
+        dataYear,
+        dataMonth,
+        dataDay
+    } 
+    dataDuration.push(upDataDuration)
+
+    // console.table(dataDuration)
+
 }
 
 function getIcon() {
@@ -170,7 +228,9 @@ function renderBlog() {
                     </div>
                     <div class="p-duration">
                         <label for="">
-                            duration : 3 month
+                            ${dataDuration[i].dataYear} 
+                            ${dataDuration[i].dataMonth} 
+                            ${dataDuration[i].dataDay}
                         </label>
                     </div>
                 </div>
