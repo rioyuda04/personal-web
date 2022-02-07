@@ -141,6 +141,7 @@ function getIcon() {
         ValueAndroid = ` `
         insertIconAndroid = ` `
     }
+    
     // init element Apple
     let initIconApple = document.getElementById('iconApple')
     let insertIconApple = initIconApple.innerHTML += `<i id="iconApple" class="fa fa-apple"></i>`
@@ -198,10 +199,11 @@ function getIcon() {
     }
     dataIcon.push(insertDataIcon)
 
-    // console.log(ValueAndroid)
+
+    console.log(ValueAndroid)
     // console.log(insertIconAndroid)
 
-    // console.table(dataIcon)
+    console.table(dataIcon)
 }
 
 function renderBlog() { 
