@@ -23,22 +23,6 @@ function addBlog(event){
     let projectname = document.getElementById('projectName').value
     let description = document.getElementById('descript').value
 
-    // get icon with image
-    // let addressNodejs = document.getElementById('iconNodejs').src
-    // let SrcBlob = []
-    // fetch(addressNodejs)
-    // .then(res => res.blob()).then(blob =>{
-    //     let blobNodejs = URL.createObjectURL(blob)
-    //     let imgNodejs = new Image()
-    //     imgNodejs.src = blobNodejs
-    //     document.getElementById('iconNodejs').appendChild(imgNodejs)
-    //     let dataBlob = {
-    //         blobNodejs
-    //     }
-    //     SrcBlob.push(dataBlob)
-    // })
-    // console.log(SrcBlob)
-
     // call function duration startdate - enddate
     durationDate()
     
@@ -63,6 +47,7 @@ function addBlog(event){
     dataBlog.push(blog)
 
     renderBlog()
+    alert(`Success Post`)
 }
 
 function durationDate(){
