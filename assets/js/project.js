@@ -201,6 +201,9 @@ function getIcon() {
 
 
     console.log(ValueAndroid)
+    console.log(ValueWindows)
+    console.log(ValueApple)
+    console.log(ValueLinux)
     // console.log(insertIconAndroid)
 
     console.table(dataIcon)
