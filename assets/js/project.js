@@ -65,7 +65,7 @@ function durationDate(){
     let getStartDay = createStartDate.getUTCDate()
 
     console.log(`startdate = ` + getStartDay +`/`+ getStartMonth +`/`+ getStartYear )
-
+    // init data enddate
     let createEndDate = new Date(endDate)
     let getEndYear = createEndDate.getFullYear()
     let getEndMonth = createEndDate.getUTCMonth() + 1
